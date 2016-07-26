@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>page 01</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<div id='app'>
+			<input type="text" v-model='newTodo' v-on:keyup.enter='addTodo'>
+			<ul>
+				<li v-for='todo in todos'>
+					<span>{{todo.text}}</span>
+					<button v-on:click='removeTodo($index)'>X</button>
+				</li>
+			</ul>
+			<button v-on:click='showResult'>提交</button>
+		</div>
+	</body>
+	<script type='text/javascript' src='../../node_modules/vue/dist/vue.js'></script>
+	<script type='text/javascript' src='./index.js'></script>
+</html>
